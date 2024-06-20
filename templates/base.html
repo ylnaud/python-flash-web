@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi Sitio{% endblock %}</title>
+    <!-- Bloque de título que puede ser definido por las plantillas que extienden esta base -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Enlace al archivo de estilos CSS -->
+</head>
+
+<body>
+    <header>
+        <h1>Mi Sitio Web</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/about">Acerca de</a></li>
+                <li><a href="/contact">Contacto</a></li>
+                <!-- Enlaces de navegación -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+        <!-- Bloque de contenido principal que será definido por las plantillas que extienden esta base -->
+    </main>
+    <footer>
+        <p>&copy; 2024 Mi Sitio Web</p>
+        <!-- Pie de página -->
+    </footer>
+</body>
+
+</html>
